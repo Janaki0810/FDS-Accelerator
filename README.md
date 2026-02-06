@@ -68,5 +68,5 @@ These cores can be extended to work together in a **systolic-array-inspired grid
 - **C/C++**: Writing test workloads for gem5
 
 
-## Repository Structure
+
 
