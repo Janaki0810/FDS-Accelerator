@@ -24,10 +24,10 @@ This project explores:
 
 - A new data structure format called **Flexible Data Structure (FDS)**
 - Modular **Verilog cores** for handling different matrix access patterns:
-  - `row_core` (row-wise)
-  - `col_core` (column-wise)
-  - `tile_core` (local extrema in tiles)
-  - `sparse_core` (non-zero-only data)
+  - row_core (row-wise)
+  - col_core (column-wise)
+  - tile_core (local extrema in tiles)
+  - sparse_core (non-zero-only data)
 - A test setup on the **Zybo Z7-10 FPGA**
 - A case study using **gem5** to compare performance between FDS and traditional methods
 
@@ -42,7 +42,7 @@ Each matrix is split logically into formats best suited for computation:
 
 Each format is assigned to a **dedicated Verilog core**, containing:
 - A local register file
-- A small instruction set (e.g., LOAD, MAC, TILE_MAX)
+- A small instruction set 
 - Minimal logic for efficiency
 
 These cores can be extended to work together in a **systolic-array-inspired grid**, allowing scalable, parallel processing of matrix operations.
@@ -51,9 +51,9 @@ These cores can be extended to work together in a **systolic-array-inspired grid
 ## Features
 
 - RTL design and testbenches in Verilog for 4 custom cores
-- Fully working implementation of `row_core` on Zybo Z7-10 FPGA
+- Fully working implementation of row_core on Zybo Z7-10 FPGA
 - Functional simulation of all cores in ModelSim
-- FDS vs Conventional matrix multiplication comparison in `gem5`
+- FDS vs Conventional matrix multiplication comparison in gem5
 - Support for 4x4, 8x8, and 16x16 matrix sizes
 - LED-based output verification on FPGA using buttons and switches
 
